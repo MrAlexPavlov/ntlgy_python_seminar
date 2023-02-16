@@ -9,18 +9,17 @@
 # 385916 -> yes
 # 123456 -> no
 
-bus_ticket = input('Введите номер билета: ')
+bus_ticket = int(input('Введите номер билета: '))
 
-if int(bus_ticket):
-    first_half = int(bus_ticket[:3])
-    second_half = int(bus_ticket[3:])
+first_half = bus_ticket//1000
+second_half = bus_ticket%1000
 
-    sum_first = first_half//100 + (first_half//10)%10 + first_half%10
-    sum_second = second_half//100 + (second_half//10)%10 + second_half%10
+sum_first = first_half//100 + (first_half//10)%10 + first_half%10
+sum_second = second_half//100 + (second_half//10)%10 + second_half%10
 
-    if sum_first == sum_second:
-        answer = "Yes"
-    else:
-        answer = "No"
+if sum_first == sum_second:
+    answer = "Yes"
+else:
+    answer = "No"
 
 print(f"\nTicket #{bus_ticket} -> {answer}")
