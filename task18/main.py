@@ -9,19 +9,22 @@
 # 1 2 3 4 5
 # 6
 # -> 5
-# array_n = [1,2,-3,3,4,4,-5,5,3,3,4] # Для проверки
 
 users_n = int(input('Введите натуральное число N: '))
 
 if users_n > 0:
+    # array_n = [1,2,-3,3,4,4,-5,5,3,3,4] # Для проверки
     array_n = [i+1 for i in range(users_n)]
     print(array_n)
 
     users_x = int(input('Введите число X: '))
+
     # формируем словарь с ключами, разницы между элемента массива и значения Х
     tmp_dict = {abs(users_x-i): i for i in array_n}
+
     # Сортируем полученный словарь по ключам
     tmp_dict = dict(sorted(tmp_dict.items()))
+    
     #Вытаскиваем первый элемент, значения которого и будет решением
     near_int = next(iter(tmp_dict.values()))
 
