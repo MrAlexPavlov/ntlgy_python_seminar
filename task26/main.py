@@ -19,7 +19,7 @@ if b == 0:
 else:
     power_ab = MathPower(a, abs(b))
 
-# Для более красивого вывода
+# Для более красивого вывода при отрицательной степени
 answer = ''
 if b < 0:
     answer = f' 1/{power_ab}'
