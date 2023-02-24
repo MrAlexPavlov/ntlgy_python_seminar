@@ -14,8 +14,8 @@ first = input('Введите первый набор цифр через про
 second = input('Введите второй набор цифр через пробел: ')
 
 # разбиваем строку на элементы и преобразуем их в число
-first = [int(val) for val in first.strip().split(' ')]
-second = [int(val) for val in second.strip().split(' ')]
+first = [int(val) for val in first.strip().split()]
+second = [int(val) for val in second.strip().split()]
 
 # Перебираем множество если его элементы есть в другом то записываем их
 answer_set = set()
