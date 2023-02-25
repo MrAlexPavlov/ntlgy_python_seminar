@@ -12,3 +12,8 @@
 # Вывод:
 # Парам пам-пам
 
+poems = input(f'Введите сроку стиха:')
+phrase_list = poems.strip().split()
+
+for phrase in phrase_list:
+    
