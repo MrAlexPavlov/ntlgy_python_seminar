@@ -6,6 +6,7 @@
 # 2 2
 # 4
 
+# Функция суммирования  x + y
 def sum_ab(x, y):
     if y == 0:
         return x
