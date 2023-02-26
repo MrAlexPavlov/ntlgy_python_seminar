@@ -12,8 +12,22 @@
 # Вывод:
 # Парам пам-пам
 
-poems = input(f'Введите сроку стиха:')
-phrase_list = poems.strip().split()
+# Подсчет количества гласных в словах
+def cntvowels(data,src):
+    return len([x for x in data if x in src])
+# подсчет среднеарифметического в значениях списка
+avg = lambda st : sum(st)/len(st)
+# Есть ли рифма?
+res = lambda syllables: avg(syllables) == syllables[0]
 
-for phrase in phrase_list:
-    
+
+vowels ='ауоыиэяюёе'
+poems = input(f'Введите сроку стиха:')
+
+# Считаем количество слогов во всей фразе и возвращаем список
+syllables = [int(cntvowels(d,vowels)) for d in poems.split()]
+
+if res(syllables):
+    print ('Парам пам-пам')
+else:
+    print ('Пам парам')
