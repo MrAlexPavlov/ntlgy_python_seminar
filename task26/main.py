@@ -10,14 +10,10 @@ def MathPower(x, y):
     return MathPower(x, y-1) * x
 
 
-a = int(input('Введите число: '))
-b = int(input(f'Введите степень числа {a}: '))
+a = int(input('Введите число A: '))
+b = int(input(f'Введите B степень числа {a}: '))
 
-
-if b == 0:
-    power_ab = 1
-else:
-    power_ab = MathPower(a, abs(b))
+power_ab = MathPower(a, abs(b))
 
 # Для вывода информации при отрицательной степени
 answer = ''
